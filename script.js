@@ -53,7 +53,7 @@ searchBtn.addEventListener("click",()=>{
    
    </div>
    
-   <button class="btn btn-dark my-3 search-btn" href="${rec.recipe.yield}">View Recipes</button> 
+   <a class="btn btn-dark my-3 search-btn" target="_blank" href="${rec.recipe.url}">View Recipes</a> 
    
    </div>
     </div>
