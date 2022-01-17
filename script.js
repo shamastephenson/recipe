@@ -10,8 +10,24 @@ const searchBtn =document.querySelector(".search-btn");
 const recipeCtn = document.querySelector(".recipe-row");
 
 
-searchBtn.addEventListener("click",()=>{
+searchBtn.addEventListener("click",Search);
 
+// Execute a function when the user releases a key on the keyboard
+searchBar.addEventListener("keyup", 
+function(event) {  
+  // Number 13 is the "Enter" key on the keyboard  
+  if (event.keyCode === 
+  13) {    
+ event.preventDefault();   
+    Search();  
+  }});
+
+
+
+
+
+
+  function Search() {
     searchValue = searchBar.value;
     let API_KEY ="a0214d08df06781b024e0732b626c15a";
     let API_ID = "fc7c5759";
@@ -88,4 +104,8 @@ searchBtn.addEventListener("click",()=>{
   })
   
   
-  })
+  }
+
+
+
+
