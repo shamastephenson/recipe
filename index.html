@@ -30,13 +30,11 @@
   </head>
   <body>
     <!--NAV-->
-    <nav class=" navbar navbar-expand-lg py-2 bg-none fixed-top bg-black">
+    <nav class=" navbar fixed-top navbar-expand-lg py-3 bg-none bg-black">
       <div class="container">
-        <a class="navbar-brand logo text-white" href="#">Recipe.io</a>
+        <a class="navbar-brand logo text-white" href="#">Recipes.io</a>
 
-
-
-
+       
 
 
 
@@ -56,6 +54,8 @@
           </ul>
     
         </div>
+        <a class="btn btn-dark btn-outline-light"" target="_blank">Filter</a> 
+
 
         
       </div>
@@ -63,16 +63,37 @@
     <!--NAV-->
 
     <!-- HERO  -->
-    <div class="hero vh-100 d-flex align-items-center">
+    <div class="hero vh-100 d-flex">
 
+      <!-- Container for Search  -->
       <div class="container">
+
+<!-- Beginning of Searchbars Row  -->
         <div class="row height d-flex justify-content-center align-items-center">
+          <!-- Recipe Search Bar  -->
           <div class="col-md-8">
-              <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control search-bar" placeholder="Search for Recipes..."> <button class="btn btn-dark search-btn">Search</button> </div>
+              <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control search-bar" placeholder="Search for Recipes..."> <button href="#recipe-results"class="btn btn-dark search-btn">Go</button> </div>
           </div>
+          <!-- Bar ends  -->
+<!-- Include Ingredients Bar Container  -->
+          <div class="col-md-8">
+            <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control inclu-search-bar" placeholder="Input ingredients to include..."> <button href="#recipe-results"class="btn btn-dark inclu-searchBtn">Include</button> </div>
+            <div class="inclusion d-flex mt-2 flex-wrap">
+
+            </div>
+        </div>
+        <!-- Bar ends  -->
+
+<!-- Exclude Ingredients Bar Container  -->
+        <!-- <div class="col-md-8 exclusion">
+          <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control search-bar" placeholder="Input ingredients to exclude..."> <button href="#recipe-results"class="btn btn-dark search-btn">Exclude</button> </div>
+      </div> -->
+      <!-- Bar ends  -->
       </div>
- 
+ <!-- Row ends  -->
       </div>
+
+      <!-- Container ends  -->
     </div>
 
     <!-- RECIPE  -->

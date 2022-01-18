@@ -1,5 +1,11 @@
+html {
+    scroll-behavior: smooth;
+    
+  }
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -14,25 +20,31 @@
     --fuelYellow: #f0a035;
     --primary: #1b1b1b;
     --body: #000000;
-    --light: #fff;
+    --light: #eaebec;
     --dark: #000;
-    ---shadow: 0 10px 34px 0 rgba(0, 0, 0, 0.32);
+    ---shadow:0px 13px 21px -5px rgba(0, 0, 0, 0.3);
 }
 
 body{
     line-height: 1.5;
     color: var(--body);
     font-family: var(--bodyFont);
-    background-color: var(
-        --body);
+    background-color:#eaebec;
     font-size: 1.1rem;
-    font-family: 'Jost', sans-serif;
+    font-family:'Josefin Sans', sans-serif;
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+-o-font-smoothing: antialiased;
 }
 
 h1,h2,h3,h4,h5,h6,.display-4,.logo{
-font-weight: 700;
-font-family: 'Jost', sans-serif;
+font-weight: 400;
+font-family: 'Zen Antique Soft', serif;
+}
+
+h1{
+    font-size: calc(1.65rem + 2.7vw);
 }
 .pr{
     padding-right: .4rem;
@@ -41,10 +53,18 @@ font-family: 'Jost', sans-serif;
 
 
 .card{
-background-color: var(--light);
+background-color: white;
  border: none;
- box-shadow: var(---shadow);
  height: 100%;
+}
+
+.card:hover{
+
+    box-shadow:0px 13px 21px -5px rgba(0, 0, 0, 0.3);
+	-webkit-transition:  .3s ease-out; 
+       -moz-transition:  .3s ease-out; 
+         -o-transition:  .3s ease-out; 
+            transition:  .3s ease-out; 
 }
 
 a{
@@ -58,8 +78,7 @@ a{
 }
 
 .logo{
-    font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 
 }
 
@@ -116,11 +135,23 @@ text-overflow: ellipsis;
 
 .img-fluid{
     width: 100%;
-    height: 100%;
+    height: 75%;
     object-fit: contain;
-    object-position: center;
+    object-position: top;
   
 }
+
+.temp-btn{
+    min-width: 55px;
+    width: auto;
+    padding: 7px 15px;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: white;
+}
+
+
+
 
 
 .height {
@@ -129,7 +160,7 @@ text-overflow: ellipsis;
 
 .search {
     position: relative;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.02)
 }
 
 .search input {
