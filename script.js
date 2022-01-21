@@ -82,7 +82,7 @@ function Search() {
    
    <a class="btn btn-dark my-3 search-btn" target="_blank" href="${
      rec.recipe.url
-   }">View Recipes</a> 
+   }">View Recipe</a> 
    
    </div>
     </div>
