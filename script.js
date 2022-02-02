@@ -1,22 +1,15 @@
-
 //Variables for Including and Excluding Ingredients
 // Assigning Variables
 const searchBar = document.querySelector(".search-bar");
-const incluSearchBar = document.querySelector(".inclu-search-bar");
-const incluSearchBtn = document.querySelector(".inclu-searchBtn");
 const searchBtn = document.querySelector(".search-btn");
 const recipeCtn = document.querySelector(".recipe-row");
-const inclCont = document.querySelector(".inclusion");
-const exclCont = document.querySelector(".exclusion");
 
-
-function createDiv(){
+function createDiv() {
   const inputValue = incluSearchBar.value;
   inclCont.innerHTML += `<div class="temp-btn mr-2">${inputValue}<a class="close">x</a></div>`;
-
 }
 
-incluSearchBtn.addEventListener("click", createDiv);
+// incluSearchBtn.addEventListener("click", createDiv);
 
 searchBtn.addEventListener("click", Search);
 
@@ -29,11 +22,7 @@ searchBar.addEventListener("keyup", function (event) {
   }
 });
 
-
-
-
-
-// Recipe Search Function 
+// Recipe Search Function
 
 function Search() {
   searchValue = searchBar.value;
@@ -51,12 +40,15 @@ function Search() {
 
       data.hits.forEach((rec) => {
         let stringIngredients = [];
+        let res = rec.recipe.ingredientLines;
+        let resString = res.toString();
+
         emptyContent += `
   
 
 
-    <div class="col-lg-3 col-md-6 col-sm-8 box-shadow g">
-  
+    <div class="col-lg-3 col-md-6 col-sm-12 box-shadow">
+  <a  class="card-link"href="${rec.recipe.url}">
     <div class="card">
     <img
     class="img-fluid"
@@ -67,29 +59,19 @@ function Search() {
    <div class="row justify-content-center align-items-center">
    <div class="col-10 d-flex flex-column">
    
-   <h5 class="mt-2 recipe-label py-3">${rec.recipe.label}</h5>
-   <p class="mt-1 text-capitalize">${rec.recipe.source}</p>
-   <div class="d-flex justify-content-start">
-   <p class="cal-num pr"><i class='bx bxs-hot'></i> ${Math.round(
-     rec.recipe.calories
-   )}</p>
-   <p class="time-num pr"><i class='bx bx-timer'></i> ${
-     rec.recipe.totalTime
-   }</p>
-   <p class="portion-size pr"><i class='bx bx-user'></i> ${rec.recipe.yield}</p>
-   
-   </div>
-   
-   <a class="btn btn-dark my-3 search-btn" target="_blank" href="${
-     rec.recipe.url
-   }">View Recipe</a> 
+   <h5 class="mt-2 recipe-label defaultSize py-3">${rec.recipe.label}</h5>
+   <p class="mt-1 secondarySize text-uppercase">${rec.recipe.source}</p>
+
+   <p class="mt-1 defaultSize text-capitalize txt-flow">${resString}</p>
+
+
    
    </div>
     </div>
 
 
     </div>
-
+</a>
   </div>
 
     
@@ -99,8 +81,5 @@ function Search() {
       recipeCtn.innerHTML = emptyContent;
     });
 
-    // Recipe Search Function ends 
+  // Recipe Search Function ends
 }
-
-
-

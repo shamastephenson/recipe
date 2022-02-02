@@ -18,113 +18,66 @@
       crossorigin="anonymous"
     ></script>
 
-
     <link
-    href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-    rel="stylesheet"
-  />
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <script src="script.js" defer></script>
   </head>
   <body>
     <!--NAV-->
-    <nav class=" navbar fixed-top navbar-expand-lg py-3 bg-none bg-black">
-      <div class="container">
-        <a class="navbar-brand logo text-white" href="#">Recipes.io</a>
 
-       
-
-
-
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Recipe.io</a>
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse navbar-light" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
           </ul>
-    
+          <form class="d-flex">
+            <input
+              class="form-control ms-2 search-bar"
+              type="text"
+              placeholder="Search for Recipes..."
+              aria-label="Search"
+            />
+            <button class="btn search-btn btn-outline-light" type="button">
+              Search
+            </button>
+          </form>
         </div>
-        <a class="btn btn-dark btn-outline-light"" target="_blank">Filter</a> 
-
-
-        
       </div>
     </nav>
     <!--NAV-->
 
-    <!-- HERO  -->
-    <div class="hero vh-100 d-flex">
-
-      <!-- Container for Search  -->
-      <div class="container">
-
-<!-- Beginning of Searchbars Row  -->
-        <div class="row height d-flex justify-content-center align-items-center">
-          <!-- Recipe Search Bar  -->
-          <div class="col-md-8">
-              <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control search-bar" placeholder="Search for Recipes..."> <button href="#recipe-results"class="btn btn-dark search-btn">Go</button> </div>
-          </div>
-          <!-- Bar ends  -->
-<!-- Include Ingredients Bar Container  -->
-          <div class="col-md-8">
-            <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control inclu-search-bar" placeholder="Input ingredients to include..."> <button href="#recipe-results"class="btn btn-dark inclu-searchBtn">Include</button> </div>
-            <div class="inclusion d-flex mt-2 flex-wrap">
-
-            </div>
-        </div>
-        <!-- Bar ends  -->
-
-<!-- Exclude Ingredients Bar Container  -->
-        <!-- <div class="col-md-8 exclusion">
-          <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control search-bar" placeholder="Input ingredients to exclude..."> <button href="#recipe-results"class="btn btn-dark search-btn">Exclude</button> </div>
-      </div> -->
-      <!-- Bar ends  -->
-      </div>
- <!-- Row ends  -->
-      </div>
-
-      <!-- Container ends  -->
-    </div>
-
     <!-- RECIPE  -->
     <section id="recipe-results">
       <div class="container">
-
-
-
-
-
-
-
-        
         <div class="row mb-5">
-          <div class="col-md-8 mx-auto text-center">
-        
-        
-         
-          </div>
+          <div class="col-md-8 mx-auto text-center"></div>
         </div>
-        <div class="row recipe-row gy-3">
-    
-
-       
-
-    
-        </div>
+        <div class="row recipe-row gy-3"></div>
       </div>
     </section>
     <!-- RECIPE  -->
-
-   
   </body>
 </html>
